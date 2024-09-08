@@ -7,6 +7,7 @@
     "service_worker": "background.js"
   },
   "action": {
+
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -14,6 +15,16 @@
     }
   },
   "permissions": [
-    "storage"
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": ["*://www.dzone.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.baeldung.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
   ]
 }
