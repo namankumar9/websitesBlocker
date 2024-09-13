@@ -19,7 +19,7 @@
     "tabs",
     "activeTab"
   ],
-  "host_permissions": ["*://www.dzone.com/*"],
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "matches": ["*://www.baeldung.com/*"],
